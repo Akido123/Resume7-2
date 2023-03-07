@@ -1,7 +1,6 @@
 body{
   font-family: Arial, Helvetica, sans-serif;
   background-color: #e2c7d1;
-  height: 10000px;
 }
 
 header{
@@ -11,7 +10,8 @@ header{
   justify-content: center;
   text-align: center;
   border-radius: 20px;
-  position: sticky;
+  position: relative;
+  margin-right: 30px;
 }
 
 aside{
@@ -40,8 +40,7 @@ header h2{
 }
 
 section{
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-right: 30px;
 }
 
 section h2, footer h2{
@@ -59,6 +58,8 @@ footer{
 
 form{
   width: 200px;
+  display: grid;
+  row-gap: 10px;
   margin-bottom: 50px;
 }
 
@@ -100,3 +101,13 @@ img{
 footer a:link, footer a:hover, footer a:visited, footer a:active{
   color: #B56D75;
 } 
+
+.banner{
+  position: relative;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgb(255, 0, 43);
+  height: 250px;
+  margin-bottom: 30px;
+}
