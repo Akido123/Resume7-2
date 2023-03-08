@@ -3,15 +3,30 @@ body{
   background-color: #e2c7d1;
 }
 
+@keyframes headeranimation{
+  0% {border-radius: 0%;}
+  50% {border-radius: 25px;
+  background-color: #b997a4;}
+}
+
 header{
   background-color: #987284;
   color: #D0D6B5;
-  display: grid;
+  display: flex;
   justify-content: center;
   text-align: center;
-  border-radius: 20px;
   position: relative;
-  margin-right: 30px;
+  height: 400px;
+  width: 800px;
+  animation-name: headeranimation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes asideanimation{
+  0% {  border-radius: 20px;}
+  50% {border-radius: 0%;
+  background-color: #f1c3d7;}
 }
 
 aside{
@@ -19,11 +34,17 @@ aside{
   color: #9d7488;
   width: 150px;
   height: 150px;
-  text-align: center;
   border-radius: 20px;
+  text-align: center;
   position: fixed;
   bottom: 20px;
   right: 20px;
+}
+
+aside:hover{
+  animation-name: asideanimation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 hr{
@@ -40,7 +61,7 @@ header h2{
 }
 
 section{
-  margin-right: 30px;
+  background-color: rgb(232, 187, 198);
 }
 
 section h2, footer h2{
@@ -52,8 +73,9 @@ section h3{
 }
 
 footer{
- margin-left: 100px;
- margin-right: 100px;
+background-color: rgb(225, 190, 199);
+padding-left: 50px;
+padding-right: 50px;
 }
 
 form{
@@ -71,6 +93,8 @@ img{
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
+  height: 150px;
+  width: 150px;
 }
 
 .page-horizontal{
@@ -78,10 +102,34 @@ img{
 }
 
 .profile{
-  justify-self: center;
+  display: flex;
+  align-items: center;
+}
+
+.author{
+  position: relative;
+  left: -40px;
 }
 
 .qaulification{
+  border-style: solid;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  border-right-color: #daa1b5;
+  border-width: 10px;
+}
+
+.experience{
+  border-style: solid;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  border-right-color: #daa1b5;
+  border-width: 10px;
+}
+
+.skills{
   border-style: solid;
   border-top: none;
   border-bottom: none;
@@ -103,11 +151,14 @@ footer a:link, footer a:hover, footer a:visited, footer a:active{
 } 
 
 .banner{
-  position: relative;
-  top: 0px;
-  left: 0px;
+  border: none;
+  border-radius: 0%;
+  width: 1200px;
+  height: 400px;
+  object-fit:contain;
+  margin: 0;
+  border-radius: 25px;
+  display: inline;
+  position: absolute;
   right: 0px;
-  background-color: rgb(255, 0, 43);
-  height: 250px;
-  margin-bottom: 30px;
 }
